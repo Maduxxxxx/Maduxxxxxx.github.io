@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@keyframes logo {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(25px);
+    }
+}
+
+:root {
+    font-size: 14px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('/assets/background.png') no-repeat center center / cover;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.logo {
+    animation: logo 4s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 450px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 1));
+}
+
+@media (max-width: 450px) {
+    .logo img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+.server-status {
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.server-status i {
+    margin: 0 0.15rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 380px) {
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0 2rem;
+    transition: opacity 0.2s ease;
+}
+
+@media (max-width: 380px) {
+    .button {
+        margin: 1rem 1rem;
+    }
+}
+
+.button:hover {
+    opacity: 0.65;
+}
+
+.button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.35);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.button .icon .fa-discord {
+    transform: translateY(2px);
+}
+
+.button .text {
+    margin-top: 0.85rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.styled-ip {
+    color: orange;
+    padding: 8px 12px;
+    border: 2px solid orange;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Arial', sans-serif; /* Change font-family as needed */
+    font-weight: bold;
+    text-transform: uppercase; /* Example styling, adjust as needed */
+    transition: background-color 0.3s ease;
+}
+
+.copy-message {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 6px 10px;
+    background-color: #ffa500;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Change font-family as needed */
+    font-size: 0.9em;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.styled-text {
+    color: orange;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.maintenance-bar {
+    background: linear-gradient(90deg, rgba(255, 136, 0, 1) 0%, rgba(255, 179, 69, 1) 100%); /* Orange background gradient */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .maintenance-bar span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.2); /* Add a subtle background to the spans */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease;
+  }
+  
+  .maintenance-bar span:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+  }
+  
+  .maintenance-bar i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  #time-remaining {
+    font-weight: bold;
+    text-transform: uppercase; /* Make the text uppercase for emphasis */
+  }
+/* Adjust for smaller screens */
+@media only screen and (max-width: 768px) {
+    .maintenance-bar {
+      font-size: 0.8em; /* Reduce font size */
+    }
+    .buttons {
+      display: flex; /* Arrange buttons horizontally */
+      flex-wrap: wrap; /* Wrap buttons onto multiple lines if needed */
+    }
+    .button {
+      margin: 5px; /* Add spacing between buttons */
+    }
+  }
